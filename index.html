@@ -1,0 +1,47 @@
+<html>
+<head>
+
+</head>
+
+<body>
+
+  <link rel="manifest" href="manifest.json">
+<form name="submit-to-google-sheet">
+  <p>Item <input name="item" type="text" placeholder="digite o item"> <br>
+  Categoria<input list="Categoria" name="Categoria" placeholder="Escolha a Categoria">
+  <datalist id="Categoria">
+    <option value="Alimentação">
+    <option value="Manutenção Casa">
+    <option value="Carro">
+    <option value="Pet">
+    <option value="Vestuário">
+  </datalist>
+  <br>
+  Valor (sem o cifrão, apenas números e vírgula)<input name="Valor" type="text" >
+  <br>
+  Tipo de Operação<input name="Operação" type="text">
+  <br>
+  Parcelas<input name="Parcelas" type="text">
+  <br>
+</p>
+  <button type="submit">Enviar</button>
+</form>
+
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwnE_j_Sopsd2zgtlO4ggeEl2T1vIJQaLEMWJ6sAZ0_AKidiRpLXrQ298WOG_MRkzK9Zw/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
