@@ -6,13 +6,13 @@
 </head>
 
 <body>
-
+<div id="tudo">
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="estilo.css">
 
 <form action="sucesso" name="submit-to-google-sheet">
-  <p>Item <input name="Item" type="text" placeholder="digite o item"> <br><br>
-  Categoria <input list="Categoria" name="Categoria" placeholder="Escolha a Categoria"><br>
+  <p>Item <br><input name="Item" type="text" placeholder="digite o item"> <br><br>
+  Categoria<br> <input list="Categoria" name="Categoria" placeholder="Escolha a Categoria"><br>
   <datalist id="Categoria">
     <option value="Alimentação">
     <option value="Manutenção Casa">
@@ -21,15 +21,43 @@
     <option value="Vestuário">
   </datalist>
   <br><br>
-  Valor (sem o cifrão, apenas números e vírgula) <input name="Valor" type="number" >
+  Valor (sem o cifrão, apenas números e vírgula) <br> <input name="Valor" type="number" >
   <br><br>
-  Tipo de Operação <input name="Operação" type="text">
+  Tipo de Operação <br> <input list="Operação" name="Operação" placeholder="Escolha a Operação"><br>
+  <datalist id="Operação">
+    <option value="Crédito">
+    <option value="Débito">
+    </datalist>
   <br><br>
-  Parcelas <input name="Parcelas" type="text">
+  Parcelas <br>
+
+  <input name="Valor" type="number" >
+  <!-- <br><input name="Parcelas" type="text"> -->
+
+  <!-- <p>Choose your favorite Web language:</p> -->
+
+<!--  
+  <input type="radio" name="Parcelas" value="HTML">
+  <label for="Crédito">Crédito</label><br>
+
+  <input type="radio" name="Parcelas" value="HTML">
+  <label for="Débito">Débito</label><br> -->
+ 
+
+
+
+
   <br><br>
 </p>
-  <button type="submit">Enviar</button>
+  <button type="submit" id="btn_enviar">Enviar</button>
  
+
+  <br>
+</div>
+  
+
+
+
 </form>
 
 
