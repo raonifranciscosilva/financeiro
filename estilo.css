@@ -1,12 +1,14 @@
 body{
+    background-image: url("bg.jpg");
+    background-size: cover;
     
-    background-color: lightblue;
 }
 p {
-    color: navy;
+    color: black;
     margin-left: 20px;
     font-size: 30px;
     text-align: center;
+    opacity: 1;
   }
   #tudo{
     
@@ -16,4 +18,13 @@ p {
   #btn_enviar{
     margin-left: 50%;
     font-size: 30px;
+  }
+  #parcelas_op{
+    float: inline-end;
+  }
+  #formulario{
+    margin: 20%;
+    margin-top: 50px;
+    background-color: darkgray;
+    opacity: 0.8;
   }
